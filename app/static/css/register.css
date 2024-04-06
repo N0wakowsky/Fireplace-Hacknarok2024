@@ -15,30 +15,22 @@ body {
     overflow: hidden;
 }
 
-.parent_container {
+.input_container {
+    text-align: center;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
 }
 
-.child_container {
-    background-color: transparent;
-}
-
-.input_container {
-    text-align: center;
-    background-color: transparent;    
-}
-
-.input_container input {
+input {
     border: 2px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    margin: 2%;
     font-size: 40px;
-    width: 90%;
-    height: 70%;
+    margin: 10px;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Norsebold', sans-serif;
 }
@@ -51,15 +43,4 @@ body {
     text-align: center;
     padding: 0px 0;
     color: #ffffff
-}
-
-.login_button {
-    border-radius: 5px;
-    padding: 10px;
-    margin: 2%;
-    font-size: 40px;
-    width: 50%;
-    height: 50%;
-    font-family: 'Norsebold', sans-serif;
-    align-items: center;
 }

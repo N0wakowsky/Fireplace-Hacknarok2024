@@ -43,20 +43,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button, button {
+    display: inline;
     border-radius: 5px;
     padding: 10px;
-    margin: 2%;
     font-size: 40px;
     font-family: 'Norsebold', sans-serif;
-    align-items: center;
     color: black;
-    background-color: #ffffff;
+    margin: 10px;
+    background-color: lightblue;
     text-decoration: none;
     border-width: 2px;
     border-style: outset;
     border-color: buttonborder;
     border-image: initial;
+    flex: 1;
 }
 
+.column {
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.row {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 
