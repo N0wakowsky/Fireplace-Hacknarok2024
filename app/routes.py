@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request
+from flask import Flask, jsonify, redirect, render_template, request
 from flask_login import (
     LoginManager,
     current_user,
@@ -9,7 +9,6 @@ from flask_login import (
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from app.backend.fireplaces import fireplace_manager
-from app.forms import LoginForm
 from app.models import User, db
 
 app = Flask(__name__)
@@ -86,22 +85,53 @@ def logout():
     return redirect("/user/login")
 
 
-@app.route("/fireplace/create", methods=["POST"])
-@login_required
+# @app.route("/fireplace/create", methods=["POST"])
+@app.route("/fireplace/create", methods=["GET"])
 def fireplace_create():
-    code = fireplace_manager.add_fireplace(current_user.id, request.form.get("title"))
+    # code = fireplace_manager.add_fireplace(current_user.id, request.form.get("title"))
+    code = fireplace_manager.add_fireplace(
+        request.args.get("host"), request.form.get("title")
+    )
 
     return redirect(f"/fireplace/{code}")
 
 
 @app.route("/fireplace/<string:code>", methods=["GET"])
 def fireplace(code: int):
-    if not fireplace_manager.get_fireplace(code):
-        return f"no fireplace with code {code}"
+    fireplace = fireplace_manager.get_fireplace(code)
 
-    return render_template("fireplace")
+    if not fireplace:
+        return f"No fireplace with code {code}"
+
+    if current_user.id == fireplace.host_id:
+        names = User.query.filter(User.id.in_(fireplace.guests)).all()
+
+        return render_template(
+            "fireplacemaster.html",
+            fireplace=(fireplace.code, fireplace.title, names),
+        )
+
+    if not current_user.id in fireplace.get_guest_ids():
+        fireplace.add_guest(current_user.id)
+
+    return render_template("fireplace.html", title=fireplace.title)
+
+
+@app.route("/api/fireplace/<string:code>/get_users", methods=["GET"])
+def fireplace(code: int):
+
+    fireplace = fireplace_manager.get_fireplace(code)
+
+    if not fireplace:
+        return f"No fireplace with code {code}"
+
+    names = User.query.filter(User.id.in_(fireplace.guests)).all()
+
+    return jsonify(names)
 
 
 @app.route("/ranking", methods=["GET"])
 def ranking():
-    return render_template("ranking.html")
+    return render_template(
+        "ranking.html", rank_list=User.query.order_by(User.points).all()
+    )

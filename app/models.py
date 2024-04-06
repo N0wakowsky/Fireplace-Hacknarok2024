@@ -16,3 +16,4 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(64), nullable=False)
     visits = db.Column(db.Integer, default=0)
     points = db.Column(db.Integer, default=0)
+    active = db.Column(db.Boolean, default=True)
