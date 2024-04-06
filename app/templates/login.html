@@ -12,11 +12,13 @@
             <h1>Logowanie</h1>
         </div>
 
-        <form class="input_container" method="post" action="/auth/login">
+        <form class="column" method="post" action="/auth/login">
             <input type="text" id="nameInput" placeholder="Imię" name="username" required>
             <input type="password" id="passwordInput" placeholder="Hasło" name="password" required>
+            <div class="row">
             <button class = "button"> zaloguj </button>
             <a href="/auth/register" class="button">Rejestracja</a>
+            </div>
         </form>
     </div>
 

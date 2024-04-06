@@ -12,10 +12,10 @@ input {
 .button {
     border-radius: 5px;
     padding: 5px;
-    margin: 10px auto; /* Adjusted margin to center horizontally */
-    font-size: 30px; /* Adjusted font size */
-    width: calc(90% - 20px); /* Adjusted width considering padding */
-    height: 80px; /* Adjusted height */
+    margin: 10px auto;
+    font-size: 30px;
+    width: calc(90% - 20px);
+    height: 80px;
     font-family: 'Norsebold', sans-serif;
     align-items: center;
 }
