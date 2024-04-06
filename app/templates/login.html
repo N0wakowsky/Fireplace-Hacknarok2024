@@ -15,16 +15,8 @@
         <form class="input_container" method="post" action="/auth/login">
             <input type="text" id="nameInput" placeholder="Imię" name="username" required>
             <input type="password" id="passwordInput" placeholder="Hasło" name="password" required>
-
-            <button class = "login_button">
-                zaloguj
-            </button>
-            <div>
-                <button class = "register_button">
-                    zarejestruj sie
-                </button>
-                <script src="{{ url_for('static', filename='js/login.js')}}"> </script>
-            </div>
+            <button class = "button"> zaloguj </button>
+            <a href="/auth/register" class="button">Rejestracja</a>
         </form>
     </div>
 
