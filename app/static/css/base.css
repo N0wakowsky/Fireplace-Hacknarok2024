@@ -42,7 +42,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff
 }
 
-
+.button, button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2%;
+    font-size: 40px;
+    font-family: 'Norsebold', sans-serif;
+    align-items: center;
+    color: black;
+    background-color: #ffffff;
+    text-decoration: none;
+}
 
 
 
