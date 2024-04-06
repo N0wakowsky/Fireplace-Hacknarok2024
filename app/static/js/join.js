@@ -7,9 +7,9 @@ document.getElementById("codeInput").addEventListener("keyup", function(event) {
 
 function handleSubmit() {
     var code = document.getElementById("codeInput").value;
-    if (code === "12345") {
-        window.location.href = "/main";
+    if (code) {
+        window.location.href = "fireplace/" + encodeURIComponent(code);
     } else {
-        alert("Niepoprawny kod. Spróbuj ponowe.");
+        alert("Niepoprawny kod. Spróbuj ponownie.");
     }
 }
