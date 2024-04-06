@@ -66,7 +66,7 @@ def register():
 @app.route("/user/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
-        return render_template("login.html", username=[1, 2, 3])
+        return render_template("login.html")
 
     elif request.method == "POST":
         user = User.query.filter_by(username=request.form.get("username")).first()
@@ -118,7 +118,7 @@ def fireplace(code: int):
 
 
 @app.route("/api/fireplace/<string:code>/get_users", methods=["GET"])
-def fireplace(code: int):
+def api_fireplace_get_users(code: int):
 
     fireplace = fireplace_manager.get_fireplace(code)
 
