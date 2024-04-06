@@ -1,15 +1,5 @@
-document.getElementById("codeInput").addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        handleSubmit();
-    }
+document.getElementById('joinButton').addEventListener('click', function() {
+    var codeInputValue = document.getElementById('code_input_create').value;
+    window.location.href = '/fireplace/' + codeInputValue;
 });
 
-function handleSubmit() {
-    var code = document.getElementById("codeInput").value;
-    if (code) {
-        window.location.href = "fireplace/" + encodeURIComponent(code);
-    } else {
-        alert("Niepoprawny kod. Spróbuj ponownie.");
-    }
-}

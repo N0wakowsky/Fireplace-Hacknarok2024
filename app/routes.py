@@ -9,3 +9,8 @@ def hello_world():
 @app.route("/main")
 def main():
     return f"GOwno1"
+
+@app.route("/fireplacemaster")
+def host():
+    test_list = ['Apple', 'Banana', 'Orange', 'Grapes']
+    return render_template("fireplacemaster.html", test_list=test_list)

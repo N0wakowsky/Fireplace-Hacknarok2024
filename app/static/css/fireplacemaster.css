@@ -10,7 +10,7 @@
 
 body {
     overflow: hidden;
-    background-image: url("../img/background1.jpg");
+    background-image: url("../img/background6.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -30,6 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 .child_container {
     background-color: transparent;
     text-align: center;
+     background-color: rgba(0, 0, 0, 0.5);
+     width: 40%;
+    height: 60%;
 }
 
 .header {
@@ -42,7 +45,36 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff
 }
 
+.my-list {
+    list-style-type: none;
+    padding: 0;
+}
 
+.my-list li {
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Norse', sans-serif;
+    color: white;
+    font-size: 30px;
+}
 
+.info-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px; /* Adjust margin as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
+.username, .room-code {
+  color: white;
+  font-size: 30px;
+  font-family: Norsebold, sans-serif;
+}
 
+.room-code {
+  margin-top: 5px;
+}
