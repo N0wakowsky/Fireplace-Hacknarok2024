@@ -1,6 +1,6 @@
 <h1 align="center">TBH Creatures</h1>
 
-## Projekt Hacknarock
+## Projekt Hacknarok
 
 ### Instrukcja uruchomienia
 1. Sklonuj repozytorium
@@ -23,4 +23,4 @@ pip install Flask
 flask --app main run
 ```
 
-4. W środowisku lokalnym wejdź do aplikacji poprzez przeglądarkę internetową. Znajduje się pod adresem <a>localhost:5000</a>
+4. W środowisku lokalnym wejdź do aplikacji poprzez przeglądarkę internetową. Znajduje się pod adresem [localhost:5000](localhost:5000)
