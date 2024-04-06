@@ -19,17 +19,23 @@
     </div>
 
     <div class="child_container">
-        <div class="input_container">
-            <input type="text" id="code_input_create" placeholder="Podaj nazwę">
-            <button class="button" id="joinButton"> Dołącz do ogniska </button>
+        <div class="column">
+            <div class="header">
+                <h1>Dołącz do ogniska</h1>
+            </div>
+            <input type="text" id="code_input_create" placeholder="Podaj kod">
+            <button class="button" id="joinButton"> Dołącz </button>
         </div>
 
         <script src="{{ url_for('static', filename='js/join.js')}}"></script>
 
-        <form class="input_container_create" method="post" action="api/fireplace/create">
+        <form class="column" method="post" action="api/fireplace/create">
+            <div class="header">
+                <h1>Rozpal ognisko</h1>
+            </div>
             <input type="text" id="code_input_create" name="code" placeholder="Podaj nazwę">
             <button class = "button">
-                Utwórz ognisko
+                Utwórz
             </button>
         </form>
     </div>

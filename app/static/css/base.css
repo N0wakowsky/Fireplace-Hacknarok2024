@@ -33,13 +33,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     padding: 0px 0;
-    color: #ffffff
+    color: white;
+    font-family: Norse, sans-serif;
 }
 
 .button, button {
