@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fireplacemaster.css')}}">
+    {% block header %}{% endblock %}
+</head>
+
+
+{% block body %}
+<div class = "parent_container">
+    <div class= "child_container">
+         <div class="header">
+            <h1>Wikingowie</h1>
+        </div>
+         <ul class="my-list">
+         {% for item in test_list %}
+             <li>{{ loop.index }}. {{ item }}</li>
+         {% endfor %}
+    </ul>
+    </div>
+
+<div class="info-container">
+  <div class="username">Username: John Doe</div>
+  <div class="room-code">Room Code: ABC123</div>
+</div>
+
+</div>
+{% endblock %}
+
