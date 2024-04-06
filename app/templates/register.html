@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css')}}">
+{% endblock %}
+
+{% block body %}
+<div class = "parent_container">
+    <div class="child_container">
+        <div class="header">
+            <h1>Rejestracja</h1>
+        </div>
+
+        <form class="input_container" method="get" action="/user/register">
+            <input type="text" id="nameInput" placeholder="Imię" name="username" required>
+            <input type="password" id="passwordInput" placeholder="Hasło" name="password" required>
+
+            <button class = "register_button">
+                til valhall
+            </button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

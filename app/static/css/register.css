@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Norsebold';
+    src: url("../fonts/Norsebold.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url("../fonts/Norse.otf") format('opentype');
+}
+
+body {
+    background-image: url("../img/registerimg.webp");
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    overflow: hidden;
+}
+
+.parent_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.child_container {
+    background-color: transparent;
+}
+
+.input_container {
+    text-align: center;
+    background-color: transparent;    
+}
+
+.input_container input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2%;
+    font-size: 40px;
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    font-family: 'Norsebold', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    padding: 0px 0;
+    color: #ffffff
+}
+
+.register_button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2%;
+    font-size: 40px;
+    width: 50%;
+    height: 50%;
+    font-family: 'Norsebold', sans-serif;
+    align-items: center;
+}
