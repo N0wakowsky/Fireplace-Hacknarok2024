@@ -1,0 +1,12 @@
+.input_container {
+    text-align: center;
+}
+
+.input_container input[type="text"] {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}

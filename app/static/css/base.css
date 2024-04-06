@@ -1,18 +1,32 @@
+@font-face {
+    font-family: 'Norsebold';
+    src: url("../fonts/Norsebold.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url("../fonts/Norse.otf") format('opentype');
+}
+
 body {
     background-color: rgb(17, 23, 46);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Norsebold', sans-serif;
+}
+
 .parent_container {
     display: flex;
-    justify-content: center; /* Centers the child horizontally */
-    align-items: center; /* Centers the child vertically */
-    height: 100vh; /* Adjust as needed */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .child_container {
-    width: 400px; /* Set a width for the child container */
-    height: 400px; /* Set a height for the child container */
-    background-color: rgb(17, 23, 46); /* Just for demonstration */
+    width: 400px;
+    height: 400px;
+    background-color: rgb(17, 23, 46);
 }
 
 .header {
@@ -21,20 +35,6 @@ body {
     padding: 0px 0;
     color: #ffffff
 }
-
-.input_container {
-    text-align: center;
-}
-
-.input_container input[type="text"] {
-    border: 2px solid #ccc; /* Przykładowy styl ramki */
-    border-radius: 5px; /* Przykładowy styl zaokrąglenia rogów */
-    padding: 10px; /* Przykładowy styl wewnętrznego marginesu */
-    font-size: 40px; /* Przykładowy rozmiar czcionki */
-    width: 100%; /* Szerokość pola tekstowego */
-    box-sizing: border-box; /* Zapobiega dodawaniu paddingu do szerokości */
-}
-
 
 
 
