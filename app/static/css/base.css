@@ -1,3 +1,40 @@
 body {
     background-color: rgb(17, 23, 46);
 }
+
+.parent_container {
+    display: flex;
+    justify-content: center; /* Centers the child horizontally */
+    align-items: center; /* Centers the child vertically */
+    height: 100vh; /* Adjust as needed */
+}
+
+.child_container {
+    width: 400px; /* Set a width for the child container */
+    height: 400px; /* Set a height for the child container */
+    background-color: rgb(17, 23, 46); /* Just for demonstration */
+}
+
+.header {
+    font-size: 30px;
+    text-align: center;
+    padding: 0px 0;
+    color: #ffffff
+}
+
+.input_container {
+    text-align: center;
+}
+
+.input_container input[type="text"] {
+    border: 2px solid #ccc; /* Przykładowy styl ramki */
+    border-radius: 5px; /* Przykładowy styl zaokrąglenia rogów */
+    padding: 10px; /* Przykładowy styl wewnętrznego marginesu */
+    font-size: 40px; /* Przykładowy rozmiar czcionki */
+    width: 100%; /* Szerokość pola tekstowego */
+    box-sizing: border-box; /* Zapobiega dodawaniu paddingu do szerokości */
+}
+
+
+
+

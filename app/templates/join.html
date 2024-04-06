@@ -1,10 +1,24 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<title>Gówno</title>
+<title>Login</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css')}}">
 {% endblock %}
 
 {% block body %}
-<input type="text" placeholder="Podaj kod">
+<div class = "parent_container">
+    <div class="child_container">
+
+        <div class="header">
+            <h2>Dołącz do ogniska</h2>
+        </div>
+
+        <div class="input_container">
+            <input type="text" id="codeInput" placeholder="Podaj kod">
+        </div>
+
+        <script src="{{ url_for('static', filename='js/login.js')}}"> </script>
+
+    </div>
+</div>
 {% endblock %}
