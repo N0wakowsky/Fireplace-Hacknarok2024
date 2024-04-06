@@ -9,7 +9,10 @@
 }
 
 body {
-    background-color: rgb(17, 23, 46);
+    background-image: url("../img/loginimg.webp");
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    overflow: hidden;
 }
 
 .parent_container {
@@ -20,14 +23,43 @@ body {
 }
 
 .child_container {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(17, 23, 46);
+    background-color: transparent;
+}
+
+.input_container {
+    text-align: center;
+    background-color: transparent;    
+}
+
+.input_container input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2%;
+    font-size: 40px;
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    font-family: 'Norsebold', sans-serif;
 }
 
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
     text-align: center;
     padding: 0px 0;
     color: #ffffff
+}
+
+.login_button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2%;
+    font-size: 40px;
+    width: 50%;
+    height: 50%;
+    font-family: 'Norsebold', sans-serif;
+    align-items: center;
 }
