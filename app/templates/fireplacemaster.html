@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> </html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/fireplacemaster.css')}}">
+    <title>Fireplace</title>
     {% block header %}{% endblock %}
 </head>
 
 
 {% block body %}
 <div class = "parent_container">
+    <div class="exit-button-container">
+        <a class="button" href="/">Opuść ognisko</a>
+    </div>
     <div class= "child_container">
          <div class="header">
             <h1>Wikingowie</h1>
@@ -21,11 +25,15 @@
     </ul>
     </div>
 
-<div class="info-container">
-  <div class="username">Username: John Doe</div>
-  <div class="room-code">Room Code: ABC123</div>
+    <div class="info-container">
+        <div class="username">Username: John Doe</div>
+        <div class="room-code">Room Code: ABC123</div>
+    </div>
+
 </div>
 
 </div>
+
+<script src="{{ url_for('static', filename='js/uppdate_handler.js')}}"> </script>
 {% endblock %}
 
