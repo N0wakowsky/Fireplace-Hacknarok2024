@@ -9,6 +9,7 @@
 }
 
 body {
+    overflow: hidden;
     background-image: url("../img/background1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,15 +22,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .parent_container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
 .child_container {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(17, 23, 46);
+    width: 30%;
+    height: 30%;
 }
 
 .header {

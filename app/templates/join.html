@@ -7,24 +7,18 @@
 
 {% block body %}
 <div class = "parent_container">
-    <div class="child_container">
 
-        <div class="header">
-            <h2>Utwórz ognisko</h2>
-        </div>
-
-        <div>
-            <button class = "button">
-                Click me
-            </button>
-        </div>
-
-        <script src="{{ url_for('static', filename='js/host.js')}}"> </script>
-
+    <div>
+        <button class="logout-button"> Logout </button>
+        <script src="{{ url_for('static', filename='js/logout.js')}}"> </script>
     </div>
-    
-    <div class="child_container">
 
+    <div>
+        <button class="stats-button"> Stats </button>
+        <script src="{{ url_for('static', filename='js/stats.js')}}"> </script>
+    </div>
+
+    <div class="child_container">
         <div class="header">
             <h2>Dołącz do ogniska</h2>
         </div>
@@ -33,8 +27,16 @@
             <input type="text" id="codeInput" placeholder="Podaj kod">
         </div>
 
-        <script src="{{ url_for('static', filename='js/login.js')}}"> </script>
-
+        <script src="{{ url_for('static', filename='js/join.js')}}"> </script>
     </div>
+
+    <div class="child_container">
+        <button class = "button">
+            Utwórz ognisko
+        </button>
+        <script src="{{ url_for('static', filename='js/host.js')}}"> </script>
+    </div>
+
 </div>
+
 {% endblock %}
