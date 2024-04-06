@@ -7,15 +7,14 @@
     {% block header %}{% endblock %}
 </head>
 
-
 {% block body %}
 <div class = "parent_container">
     <div class= "child_container">
          <div class="header">
             <h1>Wikingowie</h1>
-        </div>
+         </div>
          <ul class="my-list">
-         {% for item in test_list %}
+         {% for item in fireplace[2] %}
              <li>{{ loop.index }}. {{ item }}</li>
          {% endfor %}
     </ul>
