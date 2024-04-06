@@ -9,7 +9,10 @@
 }
 
 body {
-    background-color: rgb(17, 23, 46);
+    background-image: url("../img/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
