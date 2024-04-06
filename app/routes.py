@@ -104,4 +104,4 @@ def fireplace(code: int):
 
 @app.route("/ranking", methods=["GET"])
 def ranking():
-    return render_template("ranking.html")
+    return render_template("ranking.html", rank_list=[])
