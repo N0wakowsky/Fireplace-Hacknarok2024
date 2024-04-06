@@ -8,7 +8,7 @@
     {% block header %}{% endblock %}
 </head>
 <body>
-    <button class="button">Wyjdź</button>
+    <a href="/" class="back_button">Powrót</a>
     <div class="parent_container">
         <div class="child_container">
             <div class="header">
@@ -16,7 +16,7 @@
             </div>
             <ol>
                 {% for item in rank_list %}
-                    <li>{{ item }}</li>
+                    <li>{{ item.username }}</li>
                 {% endfor %}
             </ol>
         </div>
