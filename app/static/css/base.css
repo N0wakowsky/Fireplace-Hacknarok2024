@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Norsebold', sans-serif;
     color: black;
     margin: 10px;
-    background-color: lightblue;
+    background-color: rgb(124, 150, 171);
     text-decoration: none;
     border-width: 2px;
     border-style: outset;
