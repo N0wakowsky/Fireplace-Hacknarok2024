@@ -1,3 +1,44 @@
-body {
-    background-color: rgb(17, 23, 46);
+@font-face {
+    font-family: 'Norsebold';
+    src: url("../fonts/Norsebold.otf") format('opentype');
 }
+
+@font-face {
+    font-family: 'Norse';
+    src: url("../fonts/Norse.otf") format('opentype');
+}
+
+body {
+    overflow: hidden;
+    background-image: url("../img/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Norsebold', sans-serif;
+}
+
+.parent_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.child_container {
+    width: 30%;
+    height: 30%;
+}
+
+.header {
+    font-size: 30px;
+    text-align: center;
+    padding: 0px 0;
+    color: #ffffff
+}
+
+
+

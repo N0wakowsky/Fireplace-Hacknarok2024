@@ -1,0 +1,44 @@
+.input_container {
+    text-align: center;
+}
+
+.input_container input[type="text"] {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 300%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Norsebold", sans-serif;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 300%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Norsebold", sans-serif;
+}
+
+.logout-button {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 7%;
+    height: 7%;
+    font-family: "Norsebold", sans-serif;
+    font-size: 200%;
+    color: red;
+}
+
+.stats-button {
+    position: absolute;
+    top: 3%;
+    left: 14%;
+    width: 7%;
+    height: 7%;
+    font-family: "Norsebold", sans-serif;
+    font-size: 200%;
+}
