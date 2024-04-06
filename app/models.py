@@ -13,6 +13,6 @@ db = SQLAlchemy(model_class=Base)
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), unique=True, nullable=False)
-    password_hash = db.Column(db.String(64), nullable=False)
+    password = db.Column(db.String(64), nullable=False)
     visits = db.Column(db.Integer, default=0)
     points = db.Column(db.Integer, default=0)
