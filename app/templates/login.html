@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+{% endblock %}
+
+{% block body %}
+<div class = "parent_container">
+    <div class="child_container">
+        <div class="header">
+            <h1>Logowanie</h1>
+        </div>
+
+        <form class="input_container" method="get" action="/user/login">
+            <input type="text" id="nameInput" placeholder="Imię" name="username" required>
+            <input type="password" id="passwordInput" placeholder="Hasło" name="password" required>
+
+            <button class = "login_button">
+                zaloguj
+            </button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
