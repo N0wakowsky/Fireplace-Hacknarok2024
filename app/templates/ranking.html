@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ranking.css')}}">
+    {% block header %}{% endblock %}
+</head>
+<body>
+    <button class="button">Wyjdź</button>
+    <div class="parent_container">
+        <div class="child_container">
+            <div class="header">
+                <h1>Ranking Wikingów</h1>
+            </div>
+            <ol>
+                {% for item in rank_list %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
