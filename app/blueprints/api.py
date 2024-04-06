@@ -15,7 +15,7 @@ def api_fireplace_create():
     return redirect(f"/fireplace/{code}")
 
 
-@api.route("/fireplace/<string:code>/get_users", methods=["POST"])
+@api.route("/fireplace/<string:code>/get_users", methods=["GET"])
 @login_required
 def api_fireplace_get_users(code: int):
 

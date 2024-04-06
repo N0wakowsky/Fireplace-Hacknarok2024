@@ -23,7 +23,7 @@ app.register_blueprint(auth)
 
 @app.route("/")
 def home():
-    if current_user:
+    if current_user.is_authenticated:
         return render_template("join.html")
     return redirect("/auth/login")
 
