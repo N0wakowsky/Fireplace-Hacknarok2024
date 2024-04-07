@@ -12,19 +12,18 @@
             <h1>Rejestracja</h1>
         </div>
 
-        <form class="input_container" method="post" action="/auth/register">
+        <form class="column" method="post" action="/auth/register">
             <input type="text" id="nameInput" placeholder="Imię" name="username" required>
             <input type="password" id="passwordInput" placeholder="Hasło" name="password" required>
-
-            <button class = "register_button">
+            <div class="row">
+                <button>
                 til valhall
             </button>
             <div>
-                <button class = "login_button">
-                    zaloguj
-                </button>
-                <script src="{{ url_for('static', filename='js/loginfromregister.js')}}"> </script>
+                <a class="button" href="/auth/login">Zaloguj</a>
             </div>
+            </div>
+
         </form>
     </div>
 </div>

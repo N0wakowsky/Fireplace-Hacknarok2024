@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 .child_container {
     background-color: transparent;
     text-align: center;
-     background-color: rgba(0, 0, 0, 0.5);
-     width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40%;
     height: 60%;
 }
 
@@ -62,19 +62,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 20px; /* Adjust margin as needed */
-  background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    margin: 10px; /* Adjust margin as needed */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .username, .room-code {
-  color: white;
-  font-size: 30px;
-  font-family: Norsebold, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-family: Norsebold, sans-serif;
 }
 
 .room-code {
-  margin-top: 5px;
+    margin-top: 5px;
+}
+
+.exit-button-container {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    background-color: transparent;
+}
+
+.button {
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Norsebold', sans-serif;
+    color: black;
+    margin: 10px;
+    background-color: lightblue;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    flex: 1;
 }

@@ -53,24 +53,4 @@ body {
     color: #ffffff
 }
 
-.login_button {
-    border-radius: 5px;
-    padding: 10px;
-    margin: 2%;
-    font-size: 40px;
-    width: 50%;
-    height: 50%;
-    font-family: 'Norsebold', sans-serif;
-    align-items: center;
-}
 
-.register_button {
-    border-radius: 5px;
-    padding: 10px;
-    margin: 2%;
-    font-size: 40px;
-    width: 60%;
-    height: 50%;
-    font-family: 'Norsebold', sans-serif;
-    align-items: center;
-}

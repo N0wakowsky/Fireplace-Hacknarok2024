@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> </html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/fireplacemaster.css')}}">
-    {% block header %} {% endblock %}
+    <title>Fireplace</title>
+    {% block header %}
+    {% endblock %}
 </head>
 
-
 {% block body %}
-<div class="parent_container">
-    <div class="child_container">
-        <div class="header">
+<div class = "parent_container">
+    <div class="exit-button-container">
+        <button class="button" id="leaveButton"> Opuść ognisko </button>
+        <script src="{{ url_for('static', filename='js/fireplacemaster.js')}}"></script>
+    </div>
+    <div class= "child_container">
+         <div class="header">
             <h1>Wikingowie</h1>
         </div>
         <ol id="users">

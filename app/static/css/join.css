@@ -1,31 +1,21 @@
-.input_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-}
-
-.input_container input[type="text"] {
+input {
     border: 2px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px auto; /* Adjusted margin to center horizontally */
-    text-align: center;
-    font-size: 30px;
-    width: calc(90% - 20px); /* Adjusted width considering padding */
-    height: 80px; /* Adjusted height */
+    font-size: 40px;
+    margin: 10px;
+    width: 100%;
     box-sizing: border-box;
-    font-family: "Norsebold", sans-serif;
+    font-family: 'Norse', sans-serif;
 }
 
 .button {
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px auto; /* Adjusted margin to center horizontally */
-    font-size: 30px; /* Adjusted font size */
-    width: calc(90% - 20px); /* Adjusted width considering padding */
-    height: 80px; /* Adjusted height */
+    padding: 5px;
+    margin: 10px auto;
+    font-size: 30px;
+    width: calc(90% - 20px);
+    height: 80px;
     font-family: 'Norsebold', sans-serif;
     align-items: center;
 }
@@ -35,6 +25,7 @@
     top: 15px;
     left: 20px;
     width: 100px;
+    padding: 5px;
     height: 50px;
     font-family: "Norsebold", sans-serif;
     font-size: 30px;
@@ -44,6 +35,7 @@
 .stats-button {
     position: absolute;
     top: 15px;
+    padding: 5px;
     left: 150px;
     width: 100px;
     height: 50px;
@@ -51,27 +43,8 @@
     font-size: 30px;
 }
 
-.input_container_create {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    margin-top: 30%;
-}
 
-.input_container_create input[type="text"] {
-    margin-top: 200px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px auto; /* Adjusted margin to center horizontally */
-    text-align: center;
-    font-size: 30px;
-    width: calc(90% - 20px); /* Adjusted width considering padding */
-    height: 80px; /* Adjusted height */
-    box-sizing: border-box;
-    font-family: "Norsebold", sans-serif;
-}
+
+
 
 
