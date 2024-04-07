@@ -1,6 +1,10 @@
 <h1 align="center">TBH Creatures</h1>
+<div align="center">
+<h2 align="center">Fireplace</h2>
+<img src="app/static/img/logoxd.svg" width="100px">
+</div>
 
-## Projekt Hacknarok
+## W ramach hackathonu Hacknarock 2024
 
 ### Opis projektu
 
@@ -67,16 +71,24 @@ cd hacknarok
 
 2. Zainstaluj zależności używając poetry lub pip
 ```bash
+# z poetry
 poetry install
-poetry shell
 ```
 ```bash
+# z pip
 pip install Flask
 ```
 
 3. Uruchom serwer w środowisku lokalnym
 ```bash
-flask --app main run
+# z poetry
+poetry run python run.py
+```
+```bash
+# z pip
+python run.py
 ```
 
-4. W środowisku lokalnym wejdź do aplikacji poprzez przeglądarkę internetową. Znajduje się pod adresem [localhost:5000](localhost:5000)
+4. W środowisku lokalnym wejdź do aplikacji poprzez przeglądarkę internetową. Znajduje się pod adresem `localhost:5000`
+
+5. Użytkownicy podłączeni do tej samej sieci będą wstanie dostać się do aplikacji poprzez adres wyświetlony w terminalu po wykonaniu kroku #3.
