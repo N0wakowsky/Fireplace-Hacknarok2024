@@ -16,10 +16,18 @@
             </div>
             <ol>
                 {% for item in rank_list %}
-                    <li>{{ item.username }}</li>
+                    <li>{{ item.username }} {{item.points}}</li>
                 {% endfor %}
             </ol>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('blur', function(event) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/api/user/out', true);
+            xhr.send();
+        });
+    </script>
 </body>
 </html>

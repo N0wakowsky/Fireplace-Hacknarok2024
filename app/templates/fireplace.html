@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body %}
-<div class = "parent_container">
+<div class="parent_container">
     <div class="nickname">
         <h1>nickname</h1>
     </div>
@@ -18,4 +18,7 @@
 
     <script src="{{ url_for('static', filename='js/fireplace.js')}}"> </script>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/user_handler.js')}}"></script>
 {% endblock %}
