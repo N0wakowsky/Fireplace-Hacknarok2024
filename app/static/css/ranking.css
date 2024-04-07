@@ -1,0 +1,16 @@
+body {
+    background-image: url("../img/background1.jpg");
+}
+
+thead td {
+    color: lightblue;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td {
+    color: white;
+    text-align: center;
+    font-size: 1.75em;
+    font-family: 'Norsebold', sans-serif;
+}

@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<title>Gówno</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css')}}">
 {% endblock %}
 
 {% block body %}
-<input type="text" placeholder="Podaj kod">
+<div class="parent_container">
+    <div class="nav">
+        <img style="margin-left: 20px" src="{{ url_for('static', filename='img/logoxd.svg')}}" alt="logo">
+        <span class="label" style="margin-left: 20px">{{username}}</span>
+        <div class="spacer"></div>
+        <a href="/auth/logout" class="smallbutton">Wyloguj</a>
+        <a href="/ranking" style="margin-right: 20px" class="smallbutton">Ranking</a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="row flexswitch">
+        <div class="child_container">
+            <div class="column" style="gap:15px">
+                <h1 style="color:white">Dołącz do ogniska</h1>
+                <input type="text" id="code_input_create" placeholder="Wpisz kod">
+                <button class="button" id="joinButton"> Dołącz </button>
+            </div>
+        </div>
+
+        <div class="child_container">
+            <form class="column" style="gap:15px" method="post" action="api/fireplace/create">
+                <h1 style="color:white">Rozpal ognisko</h1>
+                <input type="text" id="code_input_create" name="title" placeholder="Podaj nazwę">
+                <button class="button"> Utwórz </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="spacer"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/join.js')}}"></script>
 {% endblock %}

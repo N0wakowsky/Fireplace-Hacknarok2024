@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fireplace.css')}}">
+{% endblock %}
+
+{% block body %}
+    <div class = "parent_container">
+        <div class="nav">
+            <img style="margin-left: 20px" src="{{ url_for('static', filename='img/logoxd.svg')}}" alt="logo">
+            <span class="label" style="margin-left: 20px">{{username}}</span>
+            <div class="spacer"></div>
+            <a id="leaveButton" style="margin-right: 20px" class="smallbutton">Opuść ognisko</a>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="child_container">
+            <h1 style="color: white">Jesteś przy ognisku wikinga {{host_username}}!</h1>
+            <h2 style="color: white">{{title}}</h2>
+            <p style="color: white">Postaraj się zachować koncetrację - to spoktanie jest bardzo ważne!</p>
+            <p style="color: white">Za każde spotkanie, w którym weźmiesz udział otrzymujesz 5 punktów.</p>
+            <p style="color: white">Kiedy twoją uwagę zaburzą media społecznościowe i opuścisz tę stronę stracisz jeden punkt.</p>
+            <p style="color: white">Udowodnij, że twoja siła woli jest godna wikinga!</p>
+        </div>
+
+        <div class="spacer"></div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/fireplacemaster.js')}}"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/user_handler.js')}}"></script>
+{% endblock %}
