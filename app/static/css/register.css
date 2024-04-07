@@ -15,25 +15,6 @@ body {
     overflow: hidden;
 }
 
-.input_container {
-    text-align: center;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-input {
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 40px;
-    margin: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Norse', sans-serif;
-}
 
 .header {
     display: flex;

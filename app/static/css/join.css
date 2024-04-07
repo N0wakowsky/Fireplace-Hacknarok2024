@@ -1,25 +1,3 @@
-input {
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 40px;
-    margin: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Norse', sans-serif;
-}
-
-.button {
-    border-radius: 5px;
-    padding: 5px;
-    margin: 10px auto;
-    font-size: 30px;
-    width: calc(90% - 20px);
-    height: 80px;
-    font-family: 'Norsebold', sans-serif;
-    align-items: center;
-}
-
 .logout-button {
     position: absolute;
     top: 15px;
