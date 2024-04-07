@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/fireplacemaster.css')}}">
     <title>Fireplace</title>
-    {% block header %}{% endblock %}
+    {% block header %}
+    {% endblock %}
 </head>
-
 
 {% block body %}
 <div class = "parent_container">
     <div class="exit-button-container">
-        <a class="button" href="/">Opuść ognisko</a>
+        <button class="button" id="leaveButton"> Opuść ognisko </button>
+        <script src="{{ url_for('static', filename='js/fireplacemaster.js')}}"></script>
     </div>
     <div class= "child_container">
          <div class="header">
