@@ -30,6 +30,10 @@ Po zalogowaniu do swojego konta, użytkownik ma możliwość stworzenia nowego s
 #### Ranking
 W oknie głównym dostępny jest również ranking. Zawiera on informacje z nazwą użytkownia, punktami przyznawanymi za odwiedziny przy ognisku, oraz ilością wizyt.
 
+<p align="center">
+    <img src="screenshots/ranking.png" width="70%">
+</p>
+
 #### Rozpal ognisko
 Do utworzenia, potrzebne jest podanie jego nazwy. Będzie ona później widoczna w oknie ogniska.\
 Po rozpaleniu ogniska, użytkownik hostujący przenoszony jest do jego okna.
@@ -43,6 +47,16 @@ Osoba tworząca ognisko widzi kod dostępu do ogniska, którego inni użytkownic
 <p align="center">
     <img src="screenshots/usernotactive.png" width="30%">
 </p>
+
+#### Dołącz do ogniska
+
+Dołączając do ogniska należy wpisać kod udostępniony przez gospodarza ogniska. Po dołączeniu, ukazuje się informacja o osobie hostującej ognisko, nazwie spotkania, oraz o panujących na ognisku zasadach.
+
+<p align="center">
+    <img src="screenshots/ogniskoguest.png" width="70%">
+</p>
+
+Opuszczając ognisko, użytkownik powraca do strony głównej.
 
 ### Instrukcja uruchomienia
 1. Sklonuj repozytorium
