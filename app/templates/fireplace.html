@@ -7,12 +7,13 @@
 
 {% block body %}
 <div class = "parent_container">
-    <div class="nickname">
-        <h1>nickname</h1>
+    <div class="exit-button-container">
+        <button class="button" id="leaveButton"> Opuść ognisko </button>
+        <script src="{{ url_for('static', filename='js/fireplacemaster.js')}}"></script>
     </div>
     <div class="child_container">
         <div class="header">
-            <div>title</div>
+            <div>Jesteś na ognisku wikingów!</div>
         </div>
     </div>
 

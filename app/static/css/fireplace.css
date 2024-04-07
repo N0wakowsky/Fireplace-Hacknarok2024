@@ -19,10 +19,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     padding: 0px 0;
+    font-family: 'Norsebold', sans-serif;
     margin: 2%;
+
     color: #ffffff
 }
 
@@ -32,21 +34,41 @@ body {
     align-items: center;
     padding: 0px 0;
     position: fixed; /* Fixed positioning */
-    top: 5%; /* Position at the top */
-    left: 1%; /* Position at the left */
+    bottom: 10%; /* Position at the top */
+    left: 10%; /* Position at the left */
     width: 20%; /* Set width of the header */
     color: #ffffff
 }
 
+
 .child_container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     justify-content: center;
     align-items: center;
     text-align: center; 
     display: flex;
-    top: 50%;
-    left: 50%; 
-    font-size: 100%;
-    height: 15%;
+}
+
+.exit-button-container {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    background-color: transparent;
+}
+
+.button {
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 30px;
     font-family: 'Norsebold', sans-serif;
+    color: black;
+    margin: 10px;
+    background-color: lightblue;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    flex: 1;
 }
