@@ -76,7 +76,7 @@ poetry install
 ```
 ```bash
 # z pip
-pip install Flask
+pip install -r requirements.txt
 ```
 
 3. Uruchom serwer w środowisku lokalnym
