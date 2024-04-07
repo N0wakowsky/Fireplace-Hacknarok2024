@@ -2,7 +2,7 @@
 name = "hacknarok"
 version = "0.1.0"
 description = "tbh creatures hackathon project"
-authors = ["Your Name <you@example.com>"]
+authors = []
 license = "MIT"
 readme = "README.md"
 

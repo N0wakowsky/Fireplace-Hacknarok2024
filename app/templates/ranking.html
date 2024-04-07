@@ -1,33 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ranking</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/ranking.css')}}">
-    {% block header %}{% endblock %}
-</head>
-<body>
-    <a href="/" class="back_button">Powrót</a>
-    <div class="parent_container">
-        <div class="child_container">
-            <div class="header">
-                <h1>Ranking Wikingów</h1>
-            </div>
-            <ol>
-                {% for item in rank_list %}
-                    <li>{{ item.username }} {{item.points}}</li>
-                {% endfor %}
-            </ol>
-        </div>
+{% extends 'base.html' %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ranking.css')}}">
+{% endblock %}
+
+{% block body %}
+<!-- <a href="/" class="back_button">Powrót</a> -->
+<div class="parent_container">
+    <div class="nav">
+        <img style="margin-left: 20px" src="{{ url_for('static', filename='img/logoxd.svg')}}" alt="logo">
+        <span class="label" style="margin-left: 20px">{{username}}</span>
+        <div class="spacer"></div>
+        <a href="/auth/logout" class="smallbutton">Wyloguj</a>
+        <a href="/" style="margin-right: 20px" class="smallbutton">Strona główna</a>
     </div>
 
-    <script>
-        window.addEventListener('blur', function(event) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/api/user/out', true);
-            xhr.send();
-        });
-    </script>
-</body>
-</html>
+    <div class="spacer"></div>
+
+    <div class="child_container" style="margin: 5px">
+        <h1 style="color:white; margin-bottom: 10px">Ranking Wikingów</h1>
+        <table>
+            <thead>
+                <td>Wiking</td>
+                <td>Punkty</td>
+                <td>Wizyty</td>
+            </thead>
+            <tbody>
+                {% for item in rank_list %}
+                <tr>
+                    <td>{{ item.username }}</td>
+                    <td>{{item.points}}</td>
+                    <td>{{item.visits}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    <div class="spacer"></div>
+</div>
+{% endblock %}

@@ -1,44 +1,42 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<title>Login</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css')}}">
 {% endblock %}
 
 {% block body %}
-<div class = "parent_container">
-
-    <div>
-        <button class="logout-button"> Logout </button>
-        <script src="{{ url_for('static', filename='js/logout.js')}}"> </script>
+<div class="parent_container">
+    <div class="nav">
+        <img style="margin-left: 20px" src="{{ url_for('static', filename='img/logoxd.svg')}}" alt="logo">
+        <span class="label" style="margin-left: 20px">{{username}}</span>
+        <div class="spacer"></div>
+        <a href="/auth/logout" class="smallbutton">Wyloguj</a>
+        <a href="/ranking" style="margin-right: 20px" class="smallbutton">Ranking</a>
     </div>
 
-    <div>
-        <button class="stats-button"> Stats </button>
-        <script src="{{ url_for('static', filename='js/stats.js')}}"> </script>
-    </div>
+    <div class="spacer"></div>
 
-    <div class="child_container">
-        <div class="column">
-            <div class="header">
-                <h1>Dołącz do ogniska</h1>
+    <div class="row flexswitch">
+        <div class="child_container">
+            <div class="column" style="gap:15px">
+                <h1 style="color:white">Dołącz do ogniska</h1>
+                <input type="text" id="code_input_create" placeholder="Wpisz kod">
+                <button class="button" id="joinButton"> Dołącz </button>
             </div>
-            <input type="text" id="code_input_create" placeholder="Podaj kod">
-            <button class="button" id="joinButton"> Dołącz </button>
         </div>
 
-        <script src="{{ url_for('static', filename='js/join.js')}}"></script>
+        <div class="child_container">
+            <form class="column" style="gap:15px" method="post" action="api/fireplace/create">
+                <h1 style="color:white">Rozpal ognisko</h1>
+                <input type="text" id="code_input_create" name="title" placeholder="Podaj nazwę">
+                <button class="button"> Utwórz </button>
+            </form>
+        </div>
 
-        <form class="column" method="post" action="api/fireplace/create">
-            <div class="header">
-                <h1>Rozpal ognisko</h1>
-            </div>
-            <input type="text" id="code_input_create" name="code" placeholder="Podaj nazwę">
-            <button class = "button">
-                Utwórz
-            </button>
-        </form>
     </div>
+
+    <div class="spacer"></div>
 </div>
 
+<script src="{{ url_for('static', filename='js/join.js')}}"></script>
 {% endblock %}

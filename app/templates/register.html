@@ -6,25 +6,31 @@
 {% endblock %}
 
 {% block body %}
-<div class = "parent_container">
+<div class="parent_container">
+    <div class="nav">
+        <img style="margin-left: 20px" src="{{ url_for('static', filename='img/logoxd.svg')}}" alt="logo">
+        <div class="spacer"></div>
+        <a href="/auth/login" style="margin-right: 20px" class="smallbutton">Zaloguj się</a>
+    </div>
+
+    <div class="spacer"></div>
+
     <div class="child_container">
-        <div class="header">
-            <h1>Rejestracja</h1>
-        </div>
+        <span class="label" style="font-size: 60pt">Fireplace</span>
+    </div>
 
-        <form class="column" method="post" action="/auth/register">
-            <input type="text" id="nameInput" placeholder="Imię" name="username" required>
+    <div class="spacer"></div>
+
+    <div class="child_container">
+
+        <form class="column" style="gap:15px" method="post" action="/auth/register">
+            <h1 style="color: white">Rejestracja</h1>
+            <input type="text" id="nameInput" placeholder="Nazwa użytkownika" name="username" required>
             <input type="password" id="passwordInput" placeholder="Hasło" name="password" required>
-            <div class="row">
-
-                <button class="button">
-                til valhall
-            </button>
-
-                <a class="button" href="/auth/login">Zaloguj</a>
-            </div>
-
+            <button class="button"> Zarejestruj </button>
         </form>
     </div>
+
+    <div class="spacer"></div>
 </div>
 {% endblock %}

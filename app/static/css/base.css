@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: 'Norsebold';
     src: url("../fonts/Norsebold.otf") format('opentype');
@@ -8,11 +10,16 @@
     src: url("../fonts/Norse.otf") format('opentype');
 }
 
+* {
+    font-family: Montserrat;
+}
+
 body {
     overflow: hidden;
     background-image: url("../img/background1.jpg");
     background-size: cover;
     background-position: center;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,41 +31,31 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
 .child_container {
-    background-color: transparent;
-    text-align: center;
-}
-
-.header {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    flex-direction: column;
     text-align: center;
-    padding: 0px 0;
-    color: white;
-    font-family: Norse, sans-serif;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 30px;
 }
 
 .button, button {
     display: inline;
     border-radius: 5px;
     padding: 10px;
-    font-size: 40px;
-    font-family: 'Norsebold', sans-serif;
+    width: 100%;
+    font-size: 20pt;
     color: black;
-    margin-top: 10px;
     background-color: lightblue;
     text-decoration: none;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
-    flex: 1;
+    font-family: 'Norsebold', sans-serif;
 }
 
 .column {
@@ -81,13 +78,52 @@ h1, h2, h3, h4, h5, h6 {
     gap: 30px;
 }
 
+
+@media (max-width: 1000px) {
+    .flexswitch {
+        flex-direction: column;
+    }
+}
+
 input {
-    border: 2px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    font-size: 40px;
-    margin: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Norse', sans-serif;
+}
+
+.nav {
+    background-color: red;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0,0,0,0.5);
+    padding: 3px;
+}
+
+.nav img {
+    height: 40px;
+}
+
+.smallbutton {
+    background-color: rgba(255,255,255,0.75);
+    display: block;
+    margin: 5px;
+    font-size: 1rem;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.label {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Norsebold', sans-serif;
+    font-size: 25pt;
 }

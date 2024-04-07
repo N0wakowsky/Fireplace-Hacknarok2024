@@ -27,7 +27,7 @@ app.register_blueprint(auth)
 @app.route("/")
 def home():
     if current_user.is_authenticated:
-        return render_template("join.html")
+        return render_template("join.html", username=current_user.username)
     return redirect("/auth/login")
 
 
@@ -39,11 +39,11 @@ def fireplace(code: int):
         return redirect("/")
 
     if current_user.id == fireplace.host_id:
-        names = User.query.filter(User.id.in_(fireplace.guests)).all()
-
         return render_template(
             "fireplacemaster.html",
-            fireplace=(fireplace.code, fireplace.title, names),
+            title=fireplace.title,
+            code=fireplace.code,
+            username=current_user.username,
         )
 
     if not current_user.id in fireplace.get_guest_ids():
@@ -55,11 +55,20 @@ def fireplace(code: int):
         fireplace.add_guest(current_user.id)
         socket.emit("update")
 
-    return render_template("fireplace.html", title=fireplace.title)
+    host = User.query.get_or_404(fireplace.host_id)
+
+    return render_template(
+        "fireplace.html",
+        title=fireplace.title,
+        username=current_user.username,
+        host_username=host.username,
+    )
 
 
 @app.route("/ranking", methods=["GET"])
 def ranking():
     return render_template(
-        "ranking.html", rank_list=User.query.order_by(User.points.desc()).all()
+        "ranking.html",
+        rank_list=User.query.order_by(User.points.desc()).all(),
+        username=current_user.username,
     )
