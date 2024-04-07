@@ -4,7 +4,7 @@
 <img src="app/static/img/logoxd.svg" width="100px">
 </div>
 
-## W ramach hackathonu Hacknarock 2024
+## W ramach hackathonu Hacknarok 2024
 
 ### Opis projektu
 
